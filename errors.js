@@ -2,7 +2,7 @@
 
 const snackSelection = 'Pretzels';
 
-if (snackSelection = 'Pretzels') {
+if (snackSelection === 'Pretzels') {
   console.log("That'll be $1, please!");
 }
 
@@ -10,11 +10,17 @@ if (snackSelection = 'Pretzels') {
 // Fix the code above this line to see the error from this first() function in your browser's console
 
 function first () {
-  second();
+  second(); // (2)
 }
 
 function second () {
-  third();
+  third(); // (3)
 }
 
-first();
+function third () {
+  console.log("Now I'm a function!");
+}
+
+// const third = 'Declaring a new variable.';
+
+first(); // (1) global scope
